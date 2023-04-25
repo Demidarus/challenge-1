@@ -74,9 +74,10 @@ function validate($item) {
 function run2() {
     foreach(getItemList() as $i) {
         $itemDetail = itemDetail($i);
+        $detailsId = "details_" . $i;
         echo <<<EOF
         <script>
-            document.getElementById('details_<?=$i?>').innerHTML = '<?=$itemDetail?>';
+            document.getElementById('$detailsId').innerHTML = '<?=$itemDetail?>';
     </script>
     EOF;
     }
