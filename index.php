@@ -16,7 +16,11 @@
                     .then(response => response.text())
                     .then(data => {
                         detailsElement.innerHTML = data;
-                    });
+                    })
+                    .catch(error => {
+                        console.error('Error fetching item details:', error);
+                        detailsElement.innerHTML = 'Error loading item details.';
+                    });;
             } else {
                 console.error('Element with ID ' + detailsId + ' not found');
             }
