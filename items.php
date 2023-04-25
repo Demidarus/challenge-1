@@ -22,7 +22,7 @@ function two_seconds_delay()
  * Returns all relevant items from the database.
  * It's the "items" table from the product management system.
  * Schema is defined there.
- * @return int
+ * @return array
  */
 function getItemList(): array
 {
