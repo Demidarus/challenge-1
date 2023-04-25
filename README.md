@@ -6,7 +6,7 @@ Please perform a code review on the latest merge request.
   - Find out what it’s supposed to do.
   - Write down the functional requirements.
 - Review the code<br>
-  Find issues and suggest changes. 
+  Find issues and suggest changes.
   - General conventions<br>
     HTML5 conformity, PHP at least PSR-1
   - Consistent folding & indentation
@@ -19,3 +19,7 @@ Please perform a code review on the latest merge request.
   - General structure Functional issues
 - Suggest improvements
 - If possible, provide a runtime environment (e.g. provide a docker setup).
+
+## Docker
+
+- Followed this guide to provide runtime environment for this application: https://semaphoreci.com/community/tutorials/dockerizing-a-php-application
