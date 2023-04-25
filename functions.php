@@ -16,11 +16,8 @@ function two_seconds_delay()
  */
 function getItemList(): array
 {
-    $dbUser = getenv('DB_USER');
-    $dbPass = getenv('DB_PASS');
-
-    echo $dbUser;
-    echo $dbPass;
+    $dbUser = $_ENV['DB_USERNAME'];
+    $dbPass = $_ENV['DB_PASSWORD'];
     
     two_seconds_delay();
     return [
