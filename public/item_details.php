@@ -1,6 +1,6 @@
 <?php
 
-require '../functions.php';
+require_once '../functions.php';
 
 /**
  * Handles AJAX requests for item details.

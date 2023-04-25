@@ -58,7 +58,7 @@ function run()
 <div>
     <h2><?=$i?></h2>
     <div id="details_<?=$i?>">
-        <button onclick="fetchItemDetails(<?=$i?>)">Load details</button>
+        <button onclick="fetchItemDetails(<?=htmlspecialchars($i)?>)">Load details</button>
     </div>
 </div>
 <?php

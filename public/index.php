@@ -33,7 +33,7 @@
     <form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
         <input type="submit" value="show items" name="submit" />
     </form>
-    <?php require '../functions.php'; run(); ?>
+    <?php require_once '../functions.php'; run(); ?>
 </body>
 
 </html>
