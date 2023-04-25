@@ -77,7 +77,7 @@ function run2() {
         $detailsId = "details_" . $i;
         echo <<<EOF
         <script>
-            document.getElementById('$detailsId').innerHTML = '<?=$itemDetail?>';
+            document.getElementById('$detailsId').innerHTML = '{$itemDetail}';
     </script>
     EOF;
     }
