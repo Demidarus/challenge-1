@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
 </head>
+
 <body>
-<form method="POST">
-    <input type="submit" value="show items" name="submit"/>
-</form>
-<? run(); ?>
-<?php
+    <form method="POST">
+        <input type="submit" value="show items" name="submit" />
+    </form>
+    <?php run(); ?>
+    <?php
 function two_seconds_delay()
 {
     // simlates
@@ -55,8 +57,8 @@ function run()
         <div id="details_<?=$i?>">
             loading...
         </div>
-    </div>        
-            <?php
+    </div>
+    <?php
         }
         
         // TODO: Someone should find out how to do this in background; Takes too long.
@@ -75,10 +77,10 @@ function run2() {
         echo <<<EOF
         <script>
             document.getElementById('details_<?=$i?>').innerHTML = '<?=$itemDetail?>';
-        </script>
-EOF;
-}
+    </script>
+    EOF;
+    }
 
-}
+    }
 
-?>
+    ?>
