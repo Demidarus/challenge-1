@@ -71,18 +71,3 @@ function run()
 function validate($item) {
     return is_int($item);
 }
-
-function run2() {
-    foreach(getItemList() as $i) {
-        $itemDetail = itemDetail($i);
-        $detailsId = "details_" . $i;
-        echo <<<EOF
-        <script>
-            document.getElementById('$detailsId').innerHTML = '{$itemDetail}';
-    </script>
-    EOF;
-    }
-
-    }
-
-    ?>
