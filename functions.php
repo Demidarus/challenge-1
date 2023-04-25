@@ -2,7 +2,7 @@
 
 function two_seconds_delay()
 {
-    // simlates
+    // simulates
     // backend delay
     sleep(2);
 }
@@ -38,6 +38,9 @@ function run()
 {
     if (!empty($_REQUEST['submit'])) {
         foreach(getItemList() as $i) {
+            if(!validate($i)){
+                continue;
+            }
             ?>
 <div>
     <h2><?=$i?></h2>
@@ -50,9 +53,8 @@ function run()
     }
 }
 
-// We might need this later, so I just prepared it.
 function validate($item) {
-    return is_int($item);
+    return is_numeric($item) && $item >= 100000 && $item <= 999999;
 }
 
 
