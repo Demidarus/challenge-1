@@ -1,9 +1,10 @@
 <?php 
 
+/**
+ * Simulates a backend delay of two seconds
+ */
 function two_seconds_delay()
 {
-    // simulates
-    // backend delay
     sleep(2);
 }
 
@@ -28,12 +29,24 @@ function getItemList(): array
     ];
 }
 
+/**
+ * Returns item details from the database.
+ * It's the "items" table from the product management system.
+ * Schema is defined there.
+ * @return string
+ */
 function itemDetail($item) {
     two_seconds_delay();
     // whatever is in the database for that item
     return "Details for item $item.";
 }
 
+/**
+ * Displays the items and their associated "Load details" buttons on the page.
+ * Calls the validate() function on each item to ensure only valid items are displayed.
+ * The item details are fetched asynchronously using the fetchItemDetails() JavaScript function
+ * when the user clicks the "Load details" button.
+ */
 function run()
 {
     if (!empty($_REQUEST['submit'])) {
@@ -53,22 +66,11 @@ function run()
     }
 }
 
+/**
+ * Validates the item ID to ensure it's a valid integer between 100000 and 999999.
+ * @param int $item The item ID to validate.
+ * @return bool True if the item ID is valid, false otherwise.
+ */
 function validate($item) {
     return is_numeric($item) && $item >= 100000 && $item <= 999999;
 }
-
-
-function run2() {
-    foreach(getItemList() as $i) {
-        $itemDetail = itemDetail($i);
-        $detailsId = "details_" . $i;
-        echo <<<EOF
-        <script>
-            document.getElementById('$detailsId').innerHTML = '{$itemDetail}';
-    </script>
-    EOF;
-    }
-
-    }
-
-?>
