@@ -15,7 +15,7 @@ function two_seconds_delay()
 {
     // simlates
     // backend delay
-    sleep(1);
+    sleep(2);
 }
 
 /**
