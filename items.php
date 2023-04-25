@@ -7,7 +7,8 @@
 
 <body>
     <form method="POST">
-        <input type="submit" value="show items" name="submit" />
+        <input type="submit" value="show items" name="submit"
+            action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" />
     </form>
     <?php run(); ?>
     <?php
@@ -54,7 +55,7 @@ function run()
             ?>
     <div>
         <h2><?=$i?></h2>
-        <div id="details_<?=$i?>">
+        <div id=" details_<?=$i?>">
             loading...
         </div>
     </div>
