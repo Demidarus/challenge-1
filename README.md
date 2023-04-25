@@ -18,3 +18,4 @@ Please perform a code review on the latest merge request.
   - Use of efficient and suitable design patterns
   - General structure Functional issues
 - Suggest improvements
+- If possible, provide a runtime environment (e.g. provide a docker setup).
